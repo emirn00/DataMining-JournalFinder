@@ -1,0 +1,36 @@
+<div class="container">
+  <header>
+    <h1>Journal Finder System</h1>
+    <p>Data Mining Final Project</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Recommend Journals</h2>
+      <p>Enter the abstract of your article below to find the most relevant journals.</p>
+      
+      <textarea 
+        placeholder="Enter article abstract here..." 
+        [(ngModel)]="abstract" 
+        rows="10">
+      </textarea>
+
+      <button (click)="findJournals()" [disabled]="loading">
+        {{ loading ? 'Finding...' : 'Find Journals' }}
+      </button>
+
+      <div *ngIf="recommendations.length > 0" class="results">
+        <h3>Top 5 Recommended Journals</h3>
+        <ol>
+          <li *ngFor="let journal of recommendations">
+            {{ journal }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Journal Finder System - CSE444 Term Project</p>
+  </footer>
+</div>
