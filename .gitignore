@@ -1,0 +1,38 @@
+# Database
+CompSciencePub.sqlite
+
+# Java / Gradle
+backend/build/
+backend/.gradle/
+backend/bin/
+backend/target/
+.gradle/
+build/
+
+# Frontend / Node
+frontend/node_modules/
+frontend/.angular/
+frontend/dist/
+node_modules/
+
+# Python
+**/__pycache__/
+**/.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & OS files
+*.log
+.DS_Store
+Thumbs.db
