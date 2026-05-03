@@ -8,13 +8,13 @@ import lombok.Data;
 @Data
 public class AcademicRecordAbstract {
     @Id
+    @Column(name = "AcademicRecordAbstractID")
     private Long id;
 
     @OneToOne
-    @MapsId
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "AcademicRecordId")
     private AcademicRecord academicRecord;
 
-    @Column(name = "abstract", columnDefinition = "TEXT")
+    @Column(name = "AbstractText", columnDefinition = "TEXT")
     private String abstractText;
 }

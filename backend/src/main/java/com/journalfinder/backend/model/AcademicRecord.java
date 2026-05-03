@@ -8,13 +8,13 @@ import lombok.Data;
 @Data
 public class AcademicRecord {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "AcademicRecordID")
     private Long id;
 
-    @Column(name = "title")
+    @Column(name = "Title")
     private String title;
 
     @ManyToOne
-    @JoinColumn(name = "publication_id")
+    @JoinColumn(name = "PublicationId")
     private Publication publication;
 }

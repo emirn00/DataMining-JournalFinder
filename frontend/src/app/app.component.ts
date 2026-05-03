@@ -21,7 +21,8 @@ export class AppComponent {
 
     this.loading = true;
     // Backend API call (Spring Boot)
-    this.http.post<string[]>('http://localhost:8080/api/recommend', { abstract: this.abstract })
+    // Backend expects 'abstractText' field
+    this.http.post<string[]>('http://localhost:8080/api/recommend', { abstractText: this.abstract })
       .subscribe({
         next: (data) => {
           this.recommendations = data;

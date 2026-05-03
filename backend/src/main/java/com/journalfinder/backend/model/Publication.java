@@ -8,9 +8,9 @@ import lombok.Data;
 @Data
 public class Publication {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "PublicationID")
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "Name")
     private String name;
 }
